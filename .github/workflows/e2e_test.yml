@@ -26,6 +26,7 @@ jobs:
           rm zap-command-line-utitlity.zip
           ls
           ls zap-command-line-utitlity/run-zap-scan.sh
+          chmod +x zap-command-line-utitlity/run-zap-scan.sh
           echo $pwd
       - name: Install OWASP ZAP
         run: |
