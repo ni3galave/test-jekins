@@ -14,8 +14,8 @@ jobs:
       - name: Get ZAP Session
         run: |
           wget https://github.com/ni3galave/test-jekins/raw/master/zap-command-line-utitlity.zip
-          tar -zxvf zap-command-line-utitlity.zip
-          rm zap-command-line-utitlity.zip.2
+          unzip zap-command-line-utitlity.zip
+          rm zap-command-line-utitlity.zip
           ls
           ls zap-command-line-utitlity/run-zap-scan.sh
           echo $pwd
