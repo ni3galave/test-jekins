@@ -9,10 +9,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps: 
       - uses: actions/checkout@v2
-      - name: Setup Python 3.7.7
-        uses: actions/setup-python@v1
-        with: 
-          python-version: 3.7.7
       - name: Get working directory
         run: echo $(PWD)
       - name: Get ZAP Session
