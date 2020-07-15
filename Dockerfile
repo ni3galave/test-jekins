@@ -1,15 +1,15 @@
 FROM python:2.7.14-jessie
 
-WORKDIR /apps/
+WORKDIR /zap-command-line-utitlity/
 
-COPY app/ /apps/
+COPY zap-command-line-utitlity/ /zap-command-line-utitlity/
 
-WORKDIR /apps/
+WORKDIR /zap-command-line-utitlity/
 
-RUN pip install -U pip setuptools && pip install -r /apps/requirements.txt
+#RUN pip install -U pip setuptools && pip install -r /apps/requirements.txt
 
-EXPOSE 5050
+#EXPOSE 5050
 
-ENTRYPOINT ["python"]
+ENTRYPOINT ["sh"]
 
-CMD ["app.py"]
+CMD ["run-zap-scan.sh.py"]

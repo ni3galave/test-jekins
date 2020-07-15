@@ -15,8 +15,14 @@ jobs:
           python-version: 3.7.7
       - name: Get working directory
         run: echo $(PWD)
-      # - name: Build Image
-      #   run: docker build -t vulnerable-app .
+      - name: Get ZAP Session
+        run: |
+          wget https://github.com/ni3galave/test-jekins/raw/master/zap-command-line-utitlity.zip
+          tar -zxvf zap-command-line-utitlity.zip
+          rm zap-command-line-utitlity.zip
+          ls
+          ls zap-command-line-utitlity/run-zap-scan.sh
+          echo $pwd
       - name: Install OWASP ZAP
         run: |
           mkdir -p ./zap
