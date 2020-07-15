@@ -57,9 +57,9 @@ jobs:
           time: '20s'
       
       - name: Run Test Automation with ZAP
-        run: ls -ltrR
+        run: ./zap-command-line-utitlity/run-zap-scan.sh
       - name: "Upload Report"
         uses: actions/upload-artifact@v1
         with:
           name: zap-scan-report
-          path: ./report.html
+          path: ./zap-command-line-utitlity/report.html
