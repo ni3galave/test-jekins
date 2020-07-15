@@ -58,7 +58,7 @@ jobs:
       
       - name: Run Test Automation with ZAP
         run: |
-          ./zap/zap-command-line-utitlity/run-zap-scan.sh
+          sh ./zap/zap-command-line-utitlity/run-zap-scan.sh
       - name: "Upload Report"
         uses: actions/upload-artifact@v1
         with:
