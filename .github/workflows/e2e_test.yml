@@ -13,7 +13,6 @@ jobs:
         run: echo $(PWD)
       - name: Get ZAP Session
         run: |
-          pip install --upgrade zap-cli
           wget https://github.com/ni3galave/test-jekins/raw/master/zap-command-line-utitlity.zip
           unzip -o zap-command-line-utitlity.zip
           rm zap-command-line-utitlity.zip
@@ -27,6 +26,7 @@ jobs:
           wget -N https://github.com/zaproxy/zaproxy/releases/download/v2.9.0/ZAP_2.9.0_Linux.tar.gz
           tar -zxvf ZAP_2.9.0_Linux.tar.gz
           rm ZAP_2.9.0_Linux.tar.gz
+          echo '=================================='
           ls -ltr ZAP_2.9.0
           cd ZAP_2.9.0/plugin
           
