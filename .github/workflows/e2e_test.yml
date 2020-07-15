@@ -15,8 +15,8 @@ jobs:
           python-version: 3.7.7
       - name: Get working directory
         run: echo $(PWD)
-      - name: Build Image
-        run: docker build -t vulnerable-app .
+      # - name: Build Image
+      #   run: docker build -t vulnerable-app .
       - name: Install OWASP ZAP
         run: |
           mkdir -p ./zap
