@@ -8,9 +8,7 @@ export ZAP_API_KEY=12345
 
 zap-cli open-url https://test-portal.asimily.com
 
-curl -X GET  http://localhost:8090/JSON/context/view/contextList/ \
-  -H 'Accept: application/json' \
-  -H 'X-ZAP-API-Key: 12345'
+curl -X GET  http://localhost:8090/JSON/context/view/contextList/ -H 'Accept: application/json' -H 'X-ZAP-API-Key: 12345'
 zap-cli spider --context-name defaultContext --user-name admin https://test-portal.asimily.com
 #zap-cli quick-scan -l Informational -s all -r -c Prod2May -u admin https://test-portal.asimily.com
 #zap-cli active-scan --context-name defaultContext --user-name admin https://test-portal.asimily.com
