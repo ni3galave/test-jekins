@@ -19,6 +19,8 @@ jobs:
           pip install --upgrade zapcli
       - name: Get working directory
         run: echo $(PWD)
+      - name: Get working directory
+        run: apt-get install jq
       - name: Get ZAP Session
         run: |
           wget https://github.com/ni3galave/test-jekins/raw/master/zap-command-line-utitlity.zip
@@ -43,7 +45,7 @@ jobs:
       # - name: Run Docker Container
       #   run: docker run -d -p 5050:5050 vulnerable-app
       - name: Run ZAP Daemon
-        run: ./zap/ZAP_2.9.0/zap.sh -daemon -port 8090 -config api.key=12345 -session ./zap/zap-command-line-utitlity/zap-session/PreProdSession.session > /dev/null &
+        run: ./zap/ZAP_2.9.0/zap.sh -daemon -port 8090 -config api.key=12345 -config api.disablekey=true-session ./zap/zap-command-line-utitlity/zap-session/PreProdSession.session > /dev/null &
       - name: Sleep for a bit
         uses: jakejarvis/wait-action@master
         with:
