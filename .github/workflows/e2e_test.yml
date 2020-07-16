@@ -17,7 +17,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install --upgrade zapcli
-          apt-get install jq
+          apt-get install -y jq
       - name: Get working directory
         run: echo $(PWD)
       # - name: Get working directory
